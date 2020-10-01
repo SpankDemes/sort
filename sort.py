@@ -1,4 +1,3 @@
-# Imports
 import os
 import time
 import shutil
@@ -12,10 +11,10 @@ folder_names = ['Images/', 'Text/', 'Applications/', 'Audio/', 'Videos/', 'Compr
 root = tk.Tk()
 root.withdraw()
 path = filedialog.askdirectory()
+path = path + '/'
 
 # Sort function
 def sort():
-	# Variables
 	names = os.listdir(path)
 	dt=datetime.datetime.now()
 	filesmoved = 0
@@ -132,7 +131,6 @@ def sort():
 	print('')
 	"""
 
-# Loop
 while 1:
 	sort()
 	time.sleep(5)
